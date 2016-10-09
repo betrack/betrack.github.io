@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background-color: $white;
+  font-family: $font-family-base;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+section.hero {
+  padding-top: 50px;
+
+  .hero-title {
+    margin-top: 70px;
+    font-size: 75px;
+    text-align: center;
+    font-weight: 400;
+    color: $brand-blue;
+  }
+
+  .hero-text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+  }
+
+  .hero-scroll-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 40px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    display: block;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
+
+section.how-it-works {
+  padding: 100px 0 40px;
+}
