@@ -20,6 +20,39 @@ img {
   }
 }
 
+header {
+  .navbar {
+    background-color: $white;
+  }
+  
+  .navbar-toggle {
+    margin: 15px 15px 15px 0;
+    color: $black;
+
+    .icon-bar {
+      background-color: $black
+    }
+  }
+
+  .navbar-brand {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 15px 0px 15px 15px;
+    background: #2bb0af url('/images/betrack-logo-white.png') center center no-repeat;
+    background-size: 25px 25px;
+    border-radius: 50%;
+    
+    @media (min-width: $screen-md-min) {
+      width: 70px;
+      height: 70px;
+      background-size: 35px 35px;
+
+    }
+  }
+}
+
 section.hero {
   padding-top: 50px;
 
@@ -54,11 +87,108 @@ section.hero {
 
   .hero-image {
     display: block;
-    max-width: 680px;
+    max-width: 100%;
     margin: 0 auto;
+    
+    @media (min-width: $screen-md-min) {
+      max-width: 680px;
+    }
   }
 }
 
 section.how-it-works {
   padding: 100px 0 40px;
+
+  .cicle-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+  }
+
+  .benefit {
+    flex: 1 0 50%;
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+    &:nth-child(even) {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+
+    &:nth-child(7),
+    &:nth-child(8) {
+      margin-bottom: 0;
+    }
+  }
+
+  .benefit-image-circle {
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    margin-right: 15px;
+    border: 2px solid $text-light-blue;
+    border-radius: 50%;
+  }
+
+  .benefit-text {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 65px);
+    font-size: 14px;
+    color: $text-light-blue;
+  }
+}
+
+section.dashboard {
+  min-height: 100vh;
+  padding-top: 50px;
+  background: url(../images/dashboard-bg.png) center center no-repeat;
+  background-size: cover;
+
+  .dashboard-title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 52px;
+    font-weight: 300;
+    color: #FFFFFF;
+  }
+
+  .dashboard-text {
+    margin-bottom: 80px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #FFFFFF;
+
+    b {
+      font-weight: 500;
+    }
+  }
+}
+
+section.features {
+  min-height: 100vh;
+  padding-top: 50px;
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 90px;
+    justify-content: space-between;
+  }
+  .flex-item {
+    flex: 1 0 33.33%;
+    text-align: center;
+  }
+  .feature-image {
+    height: 120px;
+    margin-bottom: 30px;
+  }
 }

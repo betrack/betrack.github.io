@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="114px" viewBox="0 0 25 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>feat-03-temperatura</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="feat-03-temperatura" transform="translate(0.000000, -1.000000)" fill="#2BB0AF">
+            <g id="Group" transform="translate(0.000000, 1.321199)">
+                <path d="M12.5,0.207142857 C8.33333333,0.207142857 5.20833333,3.52142857 5.20833333,7.45714286 L5.20833333,90.9357143 C2.08333333,93.2142857 0,96.7357143 0,100.671429 C0,107.507143 5.625,113.1 12.5,113.1 C19.375,113.1 25,107.507143 25,100.671429 C25,96.5285714 22.9166667,93.2142857 19.7916667,90.9357143 L19.7916667,7.45714286 C19.7916667,3.52142857 16.6666667,0.207142857 12.5,0.207142857 L12.5,0.207142857 Z M12.5,4.35 C14.375,4.35 15.625,5.29874591 15.625,6.72186478 L15.625,66.4928571 L9.375,66.4928571 L9.375,6.72186478 C9.375,5.29874591 10.625,4.35 12.5,4.35 L12.5,4.35 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
