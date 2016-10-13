@@ -73,12 +73,13 @@ header {
       width: 70px;
       height: 70px;
       background-size: 35px 35px;
-
     }
   }
 }
 
 section.hero {
+  position: relative;
+  min-height: 100vh;
   padding-top: 50px;
 
   .hero-title {
@@ -111,9 +112,11 @@ section.hero {
   }
 
   .hero-image {
-    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
     max-width: 100%;
-    margin: 0 auto;
+    transform: translateX(-50%);
     
     @media (min-width: $screen-md-min) {
       max-width: 680px;
@@ -200,8 +203,7 @@ section.dashboard {
 }
 
 section.features {
-  min-height: 100vh;
-  padding-top: 50px;
+  padding: 135px 0 135px;
   
   .flex-container {
     display: flex;
@@ -209,13 +211,29 @@ section.features {
     padding: 0 90px;
     justify-content: space-between;
   }
+
   .flex-item {
     flex: 1 0 33.33%;
     text-align: center;
+    margin-bottom: 120px;
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 0;
+    }
   }
+
   .feature-image {
     height: 120px;
     margin-bottom: 30px;
+  }
+
+  .feature-text {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+    color: $text-blue;
   }
 }
 

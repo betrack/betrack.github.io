@@ -5414,6 +5414,8 @@ header .navbar-brand {
       background-size: 35px 35px; } }
 
 section.hero {
+  position: relative;
+  min-height: 100vh;
   padding-top: 50px; }
   section.hero .hero-title {
     margin-top: 70px;
@@ -5437,9 +5439,11 @@ section.hero {
     max-width: 40px;
     margin: 0 auto; }
   section.hero .hero-image {
-    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
     max-width: 100%;
-    margin: 0 auto; }
+    transform: translateX(-50%); }
     @media (min-width: 992px) {
       section.hero .hero-image {
         max-width: 680px; } }
@@ -5500,8 +5504,7 @@ section.dashboard {
       font-weight: 500; }
 
 section.features {
-  min-height: 100vh;
-  padding-top: 50px; }
+  padding: 135px 0 135px; }
   section.features .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -5509,10 +5512,18 @@ section.features {
     justify-content: space-between; }
   section.features .flex-item {
     flex: 1 0 33.33%;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 120px; }
+    section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
+      margin-bottom: 0; }
   section.features .feature-image {
     height: 120px;
     margin-bottom: 30px; }
+  section.features .feature-text {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #1c3244; }
 
 section.app {
   position: relative;
