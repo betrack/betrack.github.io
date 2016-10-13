@@ -11,6 +11,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var deploy = require("gulp-gh-pages");
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -102,3 +103,12 @@ gulp.task('build', function(callback) {
     callback
   )
 })
+
+var options = { 
+    remoteUrl: "https://github.com/betrack/betrack.github.io.git",
+    branch: "master"};
+
+gulp.task('deploy', function () {
+    gulp.src("dist/**/*.*")
+        .pipe(deploy(options));
+});
