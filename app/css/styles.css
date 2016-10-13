@@ -5476,12 +5476,13 @@ section.how-it-works {
     display: inline-block;
     float: left;
     width: calc(100% - 65px);
-    font-size: 14px;
+    font-size: 15px;
     color: #364a59; }
 
 section.dashboard {
   min-height: 100vh;
   padding-top: 50px;
+  padding-bottom: 50px;
   background: url(../images/dashboard-bg.png) center center no-repeat;
   background-size: cover; }
   section.dashboard .dashboard-title {
