@@ -5389,6 +5389,18 @@ img {
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     background-color: #269a99; }
 
+.vertical-align {
+  display: flex;
+  align-items: center; }
+
+@keyframes floating-v {
+  from {
+    transform: translate(0, 0px); }
+  65% {
+    transform: translate(0, 10px); }
+  to {
+    transform: translate(0, 0px); } }
+
 header .navbar {
   background-color: #fff; }
 
@@ -5415,8 +5427,11 @@ header .navbar-brand {
 
 section.hero {
   position: relative;
-  min-height: 100vh;
-  padding-top: 50px; }
+  height: 100vh;
+  padding-top: 50px;
+  min-height: 650px; }
+  section.hero .title-wrapper {
+    position: relative; }
   section.hero .hero-title {
     margin-top: 70px;
     font-size: 75px;
@@ -5433,11 +5448,13 @@ section.hero {
   section.hero .hero-scroll-icon {
     display: block;
     position: absolute;
-    top: 0;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     max-width: 40px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    animation: floating-v 3s ease-in-out infinite;
+    z-index: 2; }
   section.hero .hero-image {
     position: absolute;
     left: 50%;
@@ -5457,7 +5474,7 @@ section.how-it-works {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0;
+    padding: 0 0 0 40px;
     list-style: none; }
   section.how-it-works .benefit {
     flex: 1 0 50%;
@@ -5469,6 +5486,7 @@ section.how-it-works {
     section.how-it-works .benefit:nth-child(7), section.how-it-works .benefit:nth-child(8) {
       margin-bottom: 0; }
   section.how-it-works .benefit-image-circle {
+    position: relative;
     float: left;
     width: 50px;
     height: 50px;
@@ -5476,6 +5494,13 @@ section.how-it-works {
     margin-right: 15px;
     border: 2px solid #364a59;
     border-radius: 50%; }
+    section.how-it-works .benefit-image-circle img {
+      position: absolute;
+      max-height: 60%;
+      max-width: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   section.how-it-works .benefit-text {
     display: inline-block;
     float: left;

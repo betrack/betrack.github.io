@@ -44,6 +44,17 @@ img {
   }
 }
 
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes floating-v{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 10px);}
+    to {transform: translate(0, -0px);    
+  }    
+}
 
 header {
   .navbar {
@@ -79,8 +90,13 @@ header {
 
 section.hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 50px;
+  min-height: 650px;
+
+  .title-wrapper {
+    position: relative
+  }
 
   .hero-title {
     margin-top: 70px;
@@ -104,11 +120,13 @@ section.hero {
   .hero-scroll-icon {
     display: block;
     position: absolute;
-    top: 0;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     max-width: 40px;
     margin: 0 auto;
+    animation: floating-v 3s ease-in-out infinite;
+    z-index: 2;
   }
 
   .hero-image {
@@ -136,7 +154,7 @@ section.how-it-works {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0;
+    padding: 0 0 0 40px;
     list-style: none;
   }
 
@@ -157,6 +175,7 @@ section.how-it-works {
   }
 
   .benefit-image-circle {
+    position: relative;
     float: left;
     width: 50px;
     height: 50px;
@@ -164,6 +183,15 @@ section.how-it-works {
     margin-right: 15px;
     border: 2px solid $text-light-blue;
     border-radius: 50%;
+
+    img {
+      position: absolute;
+      max-height: 60%;
+      max-width: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .benefit-text {
