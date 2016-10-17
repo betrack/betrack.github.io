@@ -7820,6 +7820,13 @@ img {
   .sidebar-navigation ul {
     padding: 70px 0 0;
     list-style: none; }
+    .sidebar-navigation ul li:last-child a {
+      background-color: rgba(255, 255, 255, 0.3); }
+    .sidebar-navigation ul li .icon-login {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url(../images/icon-login.svg) center center no-repeat; }
     .sidebar-navigation ul a {
       font-size: 18px;
       font-weight: 400;
@@ -7898,7 +7905,8 @@ section.hero {
         max-width: 680px; } }
 
 section.how-it-works {
-  padding: 60px 0; }
+  padding: 60px 0;
+  background-color: #fbfbfc; }
   section.how-it-works .cicle-image {
     display: block;
     margin-bottom: 50px; }
@@ -8000,14 +8008,13 @@ section.features {
         margin-bottom: 120px; } }
     section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
       margin-bottom: 0; }
+  section.features .feature-image {
+    height: 120px; }
   section.features .feature-title {
-    margin-bottom: 40px;
+    margin: 30px 0 20px;
     font-size: 18px;
     font-weight: 600;
     color: #3e5160; }
-  section.features .feature-image {
-    height: 120px;
-    margin-bottom: 30px; }
   section.features .feature-text {
     max-width: 80%;
     margin: 0 auto;

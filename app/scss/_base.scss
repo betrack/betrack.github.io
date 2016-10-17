@@ -134,7 +134,17 @@ img {
     list-style: none;
 
     li {
-
+      &:last-child {
+        a {
+          background-color: rgba(255, 255, 255, 0.3)
+        }
+      }
+      .icon-login {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(../images/icon-login.svg) center center no-repeat;
+      }
     }
 
     a {
@@ -245,6 +255,7 @@ section.hero {
 
 section.how-it-works {
   padding: 60px 0;
+  background-color: #fbfbfc;
 
   .cicle-image {
     display: block;
@@ -387,16 +398,15 @@ section.features {
     }
   }
 
+  .feature-image {
+    height: 120px;
+  }
+
   .feature-title {
-    margin-bottom: 40px;
+    margin: 30px 0 20px;
     font-size: 18px;
     font-weight: 600;
     color: $titles-blue;
-  }
-
-  .feature-image {
-    height: 120px;
-    margin-bottom: 30px;
   }
 
   .feature-text {
