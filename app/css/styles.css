@@ -7885,7 +7885,7 @@ section.hero {
     transform: translateX(-50%);
     max-width: 40px;
     margin: 0 auto;
-    animation: floating-v 3s ease-in-out infinite;
+    animation: floating-v 1.9s ease-in-out infinite;
     z-index: 2; }
   section.hero .hero-image {
     position: absolute;
