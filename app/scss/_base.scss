@@ -45,8 +45,12 @@ img {
 }
 
 .vertical-align {
-  display: flex;
-  align-items: center;
+  display: block;
+  
+  @media (min-width: $screen-md-min){
+    display: flex;
+    align-items: center;
+  }
 }
 
 @keyframes floating-v{
@@ -58,31 +62,64 @@ img {
 
 /* override for boostrap menu media queries*/
 .navbar-header {
-    float: none;
+  width: 100%;
 }
 .navbar-toggle {
-    display: block;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: url(../images/icon-menu.svg) center center no-repeat;
 }
-.navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-}
-.navbar-collapse.collapse {
-    display: none!important;
-}
-.navbar-nav {
-    float: none!important;
-    margin: 7.5px -15px;
-}
-.navbar-nav>li {
-    float: none;
-}
-.navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.navbar-collapse.collapse.in {
-  display: block !important; 
+// .navbar-collapse {
+//     border-top: 1px solid transparent;
+//     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+// }
+// .navbar-collapse.collapse {
+//     display: none!important;
+// }
+// .navbar-nav {
+//     float: none!important;
+//     margin: 7.5px -15px;
+// }
+// .navbar-nav>li {
+//     float: none;
+// }
+// .navbar-nav>li>a {
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+// }
+// .navbar-collapse.collapse.in {
+//   display: block !important; 
+// }
+
+.side-navigation {
+  width: 320px;
+  height: 100vh;
+  background-color: $brand-blue;
+  position: fixed;
+  right: -320px;
+  top: 0;
+  ul {
+    padding: 0;
+    list-style: none;
+    li {}
+
+    a {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 20px 0 20px 26px;
+      display: block;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: rgba(255, 255, 255, .15);
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
 }
 
 header {
@@ -176,15 +213,23 @@ section.how-it-works {
 
   .cicle-image {
     display: block;
-    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @media (min-width: $screen-md-min) {
+      margin: 0 auto;
+    }
   }
 
   .benefits-list {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 0 0 40px;
+    padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-md-min) {
+      padding: 0 0 0 40px;
+    }
   }
 
   .benefit {
@@ -205,13 +250,19 @@ section.how-it-works {
 
   .benefit-image-circle {
     position: relative;
-    float: left;
+    display: block;
     width: 50px;
     height: 50px;
     padding: 8px;
-    margin-right: 15px;
+    margin: 0 auto;
     border: 2px solid $text-light-blue;
     border-radius: 50%;
+    
+    @media (min-width: $screen-md-min) {
+      display: inline-block;
+      float: left;
+      margin-right: 15px;
+    }
 
     img {
       position: absolute;
@@ -224,11 +275,18 @@ section.how-it-works {
   }
 
   .benefit-text {
-    display: inline-block;
-    float: left;
-    width: calc(100% - 65px);
+    display: block;
+    margin: 0 auto;
     font-size: 15px;
+    text-align: center;
     color: $text-light-blue;
+
+    @media (min-width: $screen-md-min) {
+      display: inline-block;
+      float: left;
+      width: calc(100% - 65px);
+      text-align: left;
+    }
   }
 }
 
@@ -241,10 +299,15 @@ section.dashboard {
 
   .dashboard-title {
     margin-top: 20px;
-    margin-bottom: 40px;
-    font-size: 52px;
+    margin-bottom: 30px;
+    font-size: 35px;
     font-weight: 300;
     color: #FFFFFF;
+  
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 40px;
+      font-size: 52px;
+    }
   }
 
   .dashboard-text {
@@ -265,20 +328,28 @@ section.features {
   .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 90px;
     justify-content: space-between;
+    
+    @media (min-width: $screen-md-min) {
+      padding: 0 90px;
+    }
   }
 
   .flex-item {
-    flex: 1 0 33.33%;
+    flex: 1 0 50%;
     text-align: center;
     margin-bottom: 120px;
+    
+    @media (min-width: $screen-md-min) {
+      flex: 1 0 33.33%;
+    }
 
     &:nth-child(4),
     &:nth-child(5),
     &:nth-child(6) {
       margin-bottom: 0;
     }
+
   }
 
   .feature-image {
@@ -299,11 +370,18 @@ section.app {
   overflow: hidden;
   
   .phone-image {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    width: 38%;
+    width: 95%;
+    display: block;
+    position: relative;
+    margin: -80px auto 0;
     transform: rotate(-32deg);
+    
+    @media (min-width: $screen-md-min) {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 38%;
+    }
   }
   .container-wrapper {
     padding-top: 50px;
@@ -314,18 +392,27 @@ section.app {
 
   .app-title{
     margin-bottom: 30px;
-    font-size: 73px;
+    font-size: 35px;
     font-weight: 300;
-    text-align: right;
+    text-align: left;
     color: $white;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 73px;
+      text-align: right;
+    }
   }
 
   .app-text {
     margin-bottom: 30px;
     font-size: 20px;
     font-weight: 300;
-    text-align: right;
+    text-align: left;
     color: $white;
+
+    @media (min-width: $screen-md-min) {
+      text-align: right;
+    }
 
     b {
       font-weight: 400;
@@ -333,14 +420,24 @@ section.app {
   }
 
   .btn {
-    float: right;
+    display: block;
+    width: 100%;
+
+    @media (min-width: $screen-md-min) {
+      float: right;
+      width: auto;
+    }
   }
 
   .bottom-ribbon {
     width: 100%;
-    height: 180px;
+    height: 50px;
     display: block;
     background-color: $white;
+
+    @media (min-width: $screen-md-min) {
+      height: 180px;
+    }
   }
 }
 
@@ -357,10 +454,21 @@ section.contact-form {
   }
 
   .form-logo {
-    position: absolute;
-    max-width: 18%;
-    top: 50%;
-    transform: translateY(-50%);
+    display: block;
+    position: relative;
+    top: 0;
+    max-width: 75%;
+    padding: 0 15px;
+    margin: 0 auto 30px;
+    
+    @media (min-width: $screen-md-min) {
+      position: absolute;
+      max-width: 18%;
+      top: 50%;
+      padding: 0;
+      margin: 0;
+      transform: translateY(-50%);
+    }
   }
 
   .form-group {
@@ -421,7 +529,12 @@ section.contact-form {
       color: #FFFFFF;
     }
   }
+  
   button {
-    float: right;
+    width: 100%;
+      @media (min-width: $screen-md-min) {
+        float: right;
+        width: auto;
+    }
   }
 }
