@@ -5408,30 +5408,57 @@ img {
 .navbar-header {
   width: 100%; }
 
-.navbar-toggle {
+.sidebar-toggle {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+  .sidebar-toggle:focus, .sidebar-toggle:active, .sidebar-toggle:hover {
+    outline: none; }
+  @media (min-width: 992px) {
+    .sidebar-toggle {
+      display: block; } }
+
+.navbar-toggle,
+.sidebar-toggle {
   width: 32px;
   height: 32px;
   padding: 0;
   background: url(../images/icon-menu.svg) center center no-repeat; }
 
-.side-navigation {
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: none; } }
+
+.sidebar-navigation {
   width: 320px;
   height: 100vh;
   background-color: #2bb0af;
   position: fixed;
   right: -320px;
   top: 0; }
-  .side-navigation ul {
+  .sidebar-navigation.open {
+    right: 0; }
+  .sidebar-navigation .sidebar-control {
+    display: block;
+    width: 100%;
+    height: 84px;
+    position: relative; }
+  .sidebar-navigation ul {
     padding: 0;
     list-style: none; }
-    .side-navigation ul a {
+    .sidebar-navigation ul a {
       font-size: 18px;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.6);
       padding: 20px 0 20px 26px;
       display: block;
       text-decoration: none; }
-      .side-navigation ul a:hover, .side-navigation ul a:active, .side-navigation ul a:focus {
+      .sidebar-navigation ul a:hover, .sidebar-navigation ul a:active, .sidebar-navigation ul a:focus {
         background-color: rgba(255, 255, 255, 0.15);
         color: white; }
 
@@ -5595,12 +5622,17 @@ section.features {
   section.features .flex-item {
     flex: 1 0 50%;
     text-align: center;
-    margin-bottom: 120px; }
+    margin-bottom: 60px; }
     @media (min-width: 992px) {
       section.features .flex-item {
-        flex: 1 0 33.33%; } }
+        flex: 1 0 33.33%;
+        margin-bottom: 120px; } }
     section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
       margin-bottom: 0; }
+  section.features .feature-title {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 600; }
   section.features .feature-image {
     height: 120px;
     margin-bottom: 30px; }
