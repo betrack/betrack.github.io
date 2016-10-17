@@ -2,26 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Betrack</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/styles.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-fixed-top" role="navigation">
-        <div class="container">
+        <div class="nav-container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-bar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+            <button type="button" class="sidebar-toggle" data-toggle="collapse" data-target="#sidebar-nav">
+              <span class="sr-only">Toggle side navigation</span>
+            </button>
             <a class="navbar-brand" href="#"></a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="nav-bar-collapse">
             <ul class="nav navbar-nav">
               <li>
                   <a href="#">¿como funciona?</a>
@@ -40,6 +48,25 @@
           <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+        <div class="sidebar-navigation">
+          <button type="button" class="sidebar-toggle" data-toggle="collapse" data-target="#sidebar-nav">
+            <span class="sr-only">Toggle side navigation</span>
+          </button>
+          <ul class="sidenav">
+            <li>
+                <a href="/#how-it-works">¿como funciona?</a>
+            </li>
+            <li>
+                <a href="/#dashboard">dashboard</a>
+            </li>
+            <li>
+                <a href="/#app">app</a>
+            </li>              
+            <li>
+                <a href="/#contact-form">contactanos</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <section class="hero">
@@ -54,7 +81,7 @@
       </div>
       <img class="hero-image" src="/images/hero-image.png" alt="">
     </section>
-    <section class="how-it-works">
+    <section class="how-it-works" id="how-it-works">
       <div class="container">
         <div class="row vertical-align">
           <div class="col-xs-12 col-md-5">
@@ -131,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section class="dashboard">
+    <section class="dashboard" id="dashboard">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-9 col-md-offset-3">
@@ -150,35 +177,40 @@
       <div class="container">
         <div class="row">
         <div class="flex-container">
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+           <h2 class="feature-title">NFC + App</h2>
             <img class="feature-image" src="images/feat-01-hand.svg" alt="">
             <p class="feature-text">Optimice el uso de sus barriles opere sin cuellos de botella.</p>
           </div>          
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+            <h2 class="feature-title">Bluetooth + GPS</h2>
             <img class="feature-image" src="images/feat-02-gps.svg" alt="">
             <p class="feature-text">Ubicación de cada asset en tiempo real.</p>
           </div>          
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+            <h2 class="feature-title">Cadena de frío</h2>
             <img class="feature-image" src="images/feat-03-temperatura.svg" alt="">
             <p class="feature-text">Sensor de temperatura de cada barril.</p>
           </div>          
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+            <h2 class="feature-title">Web Dashboard</h2>
             <img class="feature-image" src="images/feat-04-radar.svg" alt="">
             <p class="feature-text">Monitoreo del estado y tiempo de estancamiento de cada barril.</p>
           </div>          
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+            <h2 class="feature-title">Alertas</h2>
             <img class="feature-image" src="images/feat-05-alert.svg" alt="">
             <p class="feature-text">Alertas automáticas de llegadas y de barriles faltantes.</p>
           </div>          
-          <div class="flex-item feature">
+          <div class="flex-item feature wow fadeIn">
+            <h2 class="feature-title">Estadísticas</h2>
             <img class="feature-image" src="images/feat-06-up.svg" alt="">
             <p class="feature-text">Estadísticas de consumo y automatización de la reposición.</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="app">
-      <img class="phone-image"src="images/phone-app.png" alt="">
+    <section class="app" id="app">
       <div class="container-wrapper">
         <div class="container">
           <div class="row">
@@ -192,9 +224,10 @@
           </div>
         </div>
       </div>
+      <img class="phone-image"src="images/phone-app.png" alt="">
       <div class="bottom-ribbon"></div>
     </section>
-    <section class="contact-form">
+    <section class="contact-form" id="contact-form">
       <div class="container">
         <div class="row">
           <img class="form-logo" src="images/logo_low_blanco.png" alt="">
