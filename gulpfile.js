@@ -75,6 +75,12 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'))
 })
 
+// Copying CNAME FILE 
+gulp.task('cname', function() {
+  return gulp.src('app/CNAME')
+    .pipe(gulp.dest('dist/'))
+})
+
 // Cleaning 
 gulp.task('clean', function() {
   return del.sync('dist').then(function(cb) {
@@ -99,7 +105,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'images', 'fonts', 'cname'],
     callback
   )
 })
