@@ -134,11 +134,14 @@ img {
     list-style: none;
 
     li {
-      &:last-child {
+
+      &.login {
         a {
-          background-color: rgba(255, 255, 255, 0.3)
+          background-color: #FFFFFF;
+          color: $brand-blue;
         }
       }
+
       .icon-login {
         width: 20px;
         height: 20px;
@@ -164,6 +167,8 @@ img {
         border-color: $white;
       }
     }
+
+
   }
 }
 
@@ -340,8 +345,9 @@ section.dashboard {
   min-height: 100vh;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: url(../images/dashboard-bg.png) center center no-repeat;
+  background: url(../images/dashboard-bg.png) top center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   .dashboard-title {
     margin-top: 20px;
@@ -435,11 +441,13 @@ section.app {
       width: 38%;
     }
   }
+
   .container-wrapper {
     padding-top: 50px;
     padding-bottom: 140px;
     background: url('../images/app-background.png') center top no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .app-title{

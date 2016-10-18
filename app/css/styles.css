@@ -7820,8 +7820,9 @@ img {
   .sidebar-navigation ul {
     padding: 70px 0 0;
     list-style: none; }
-    .sidebar-navigation ul li:last-child a {
-      background-color: rgba(255, 255, 255, 0.3); }
+    .sidebar-navigation ul li.login a {
+      background-color: #FFFFFF;
+      color: #2bb0af; }
     .sidebar-navigation ul li .icon-login {
       width: 20px;
       height: 20px;
@@ -7969,8 +7970,9 @@ section.dashboard {
   min-height: 100vh;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: url(../images/dashboard-bg.png) center center no-repeat;
-  background-size: cover; }
+  background: url(../images/dashboard-bg.png) top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
   section.dashboard .dashboard-title {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -8040,7 +8042,8 @@ section.app {
     padding-top: 50px;
     padding-bottom: 140px;
     background: url("../images/app-background.png") center top no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    background-attachment: fixed; }
   section.app .app-title {
     margin-bottom: 30px;
     font-size: 35px;
