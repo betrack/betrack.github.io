@@ -7855,7 +7855,7 @@ header .navbar-brand {
   width: 45px;
   height: 45px;
   padding: 0;
-  margin: 15px 0px 15px 15px;
+  margin: 15px 0px 15px 30px;
   background: #2bb0af url("/images/betrack-logo-white.png") center center no-repeat;
   background-size: 25px 25px;
   border-radius: 50%; }
@@ -8011,7 +8011,7 @@ section.features {
     section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
       margin-bottom: 0; }
   section.features .feature-image {
-    height: 120px; }
+    height: 105px; }
   section.features .feature-title {
     margin: 30px 0 20px;
     font-size: 18px;

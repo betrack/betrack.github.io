@@ -84,12 +84,6 @@ img {
 
 .navbar-header {
   width: 100%;
-
-  // .sidebar-toggle {
-  //    @media (min-width: $screen-md-min) {
-  //     margin-top: -8px;
-  //   }   
-  // }
 }
 
 .navbar-toggle,
@@ -167,8 +161,6 @@ img {
         border-color: $white;
       }
     }
-
-
   }
 }
 
@@ -191,7 +183,7 @@ header {
     width: 45px;
     height: 45px;
     padding: 0;
-    margin: 15px 0px 15px 15px;
+    margin: 15px 0px 15px 30px;
     background: #2bb0af url('/images/betrack-logo-white.png') center center no-repeat;
     background-size: 25px 25px;
     border-radius: 50%;
@@ -405,7 +397,7 @@ section.features {
   }
 
   .feature-image {
-    height: 120px;
+    height: 105px;
   }
 
   .feature-title {
