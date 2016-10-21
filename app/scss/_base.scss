@@ -96,8 +96,29 @@ img {
 
 
 .navbar-nav {
+  background-color: $brand-blue;
+  margin-top: 0;
   @media (min-width: $screen-md-min) {
     display: none;
+  }
+
+  li {
+    a {
+      padding: 12px 15px;
+      border-left: 2px solid transparent;
+      color: white;
+      
+      &:focus {
+        color: $brand-blue;
+        border-color: white;
+      }
+    }
+    &.login {
+      a {
+        background-color: #FFFFFF;
+        color: $brand-blue;
+      }
+    }
   }
 }
 

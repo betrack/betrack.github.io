@@ -7796,9 +7796,22 @@ img {
   padding: 0;
   background: url(../images/icon-menu.svg) center center no-repeat; }
 
-@media (min-width: 992px) {
-  .navbar-nav {
-    display: none; } }
+.navbar-nav {
+  background-color: #2bb0af;
+  margin-top: 0; }
+  @media (min-width: 992px) {
+    .navbar-nav {
+      display: none; } }
+  .navbar-nav li a {
+    padding: 12px 15px;
+    border-left: 2px solid transparent;
+    color: white; }
+    .navbar-nav li a:focus {
+      color: #2bb0af;
+      border-color: white; }
+  .navbar-nav li.login a {
+    background-color: #FFFFFF;
+    color: #2bb0af; }
 
 .sidebar-navigation {
   width: 320px;
