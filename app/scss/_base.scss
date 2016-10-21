@@ -526,6 +526,9 @@ section.contact-form {
   .form-group {
     position: relative;
     margin-bottom: 25px;
+    &.error {
+      margin-bottom: 40px;
+    }
   }
 
   .form-control {
@@ -542,10 +545,21 @@ section.contact-form {
     color: white;
 
     &:focus ~ label,
-    &:valid ~ label{
+    &:valid ~ label,
+    &.used ~ label {
       opacity: 1;
       bottom: 45px;
       font-size: 14px;
+    }
+  }
+
+  .help-block {
+    position: absolute;
+    margin: 5px 0 0;
+    color: #a94442;
+    ul {
+      padding: 0;
+      list-style: none;
     }
   }
 
@@ -587,6 +601,9 @@ section.contact-form {
     @media (min-width: $screen-md-min) {
       float: right;
       width: auto;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }

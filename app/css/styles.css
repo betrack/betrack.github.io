@@ -8106,6 +8106,8 @@ section.contact-form {
   section.contact-form .form-group {
     position: relative;
     margin-bottom: 25px; }
+    section.contact-form .form-group.error {
+      margin-bottom: 40px; }
   section.contact-form .form-control {
     height: 60px;
     padding: 0;
@@ -8119,10 +8121,18 @@ section.contact-form {
     font-size: 30px;
     color: white; }
     section.contact-form .form-control:focus ~ label,
-    section.contact-form .form-control:valid ~ label {
+    section.contact-form .form-control:valid ~ label,
+    section.contact-form .form-control.used ~ label {
       opacity: 1;
       bottom: 45px;
       font-size: 14px; }
+  section.contact-form .help-block {
+    position: absolute;
+    margin: 5px 0 0;
+    color: #a94442; }
+    section.contact-form .help-block ul {
+      padding: 0;
+      list-style: none; }
   section.contact-form label {
     position: absolute;
     bottom: 0;
@@ -8155,3 +8165,5 @@ section.contact-form {
       section.contact-form button {
         float: right;
         width: auto; } }
+    section.contact-form button:focus {
+      outline: none; }

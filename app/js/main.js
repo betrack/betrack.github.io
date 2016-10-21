@@ -6,6 +6,15 @@ $( document ).ready(function() {
   $( ".sidebar-toggle" ).click(function() {
     $('.sidebar-navigation').toggleClass( "open" );
   });
+  
+  //class for filled inputs
+  $('input').blur(function() {
+    // check if the input has any value (if we've typed into it)
+    if ($(this).val())
+      $(this).addClass('used');
+    else
+      $(this).removeClass('used');
+  });
 
   // smooth scroll for links in nav
   $(function() {
