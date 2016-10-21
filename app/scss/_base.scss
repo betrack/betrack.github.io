@@ -521,6 +521,15 @@ section.contact-form {
       margin: 0;
       transform: translateY(-50%);
     }
+    p {
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+
+      a {
+        color: #brand-blue;
+      }
+    }
   }
 
   .form-group {

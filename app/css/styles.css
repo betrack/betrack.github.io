@@ -8103,6 +8103,12 @@ section.contact-form {
         padding: 0;
         margin: 0;
         transform: translateY(-50%); } }
+    section.contact-form .form-logo p {
+      font-size: 12px;
+      text-align: center;
+      color: #fff; }
+      section.contact-form .form-logo p a {
+        color: #brand-blue; }
   section.contact-form .form-group {
     position: relative;
     margin-bottom: 25px; }
