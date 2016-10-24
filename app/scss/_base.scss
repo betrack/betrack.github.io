@@ -418,7 +418,8 @@ section.features {
   }
 
   .feature-image {
-    height: 105px;
+    height: 100px;
+    max-width: 90px;
   }
 
   .feature-title {
@@ -543,12 +544,12 @@ section.contact-form {
       transform: translateY(-50%);
     }
     p {
-      font-size: 12px;
+      font-size: 16px;
       text-align: center;
       color: #fff;
 
       a {
-        color: #brand-blue;
+        color: #fff;
       }
     }
   }

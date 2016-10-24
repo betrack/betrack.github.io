@@ -8024,8 +8024,8 @@ section.features {
     section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
       margin-bottom: 0; }
   section.features .feature-image {
-    height: 100px; 
-    max-width: 90px;}
+    height: 100px;
+    max-width: 90px; }
   section.features .feature-title {
     margin: 30px 0 20px;
     font-size: 18px;
@@ -8120,9 +8120,9 @@ section.contact-form {
     section.contact-form .form-logo p {
       font-size: 16px;
       text-align: center;
-      color: #ffffff; }
+      color: #fff; }
       section.contact-form .form-logo p a {
-        color: #ffffff; }
+        color: #fff; }
   section.contact-form .form-group {
     position: relative;
     margin-bottom: 25px; }
