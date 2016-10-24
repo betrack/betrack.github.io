@@ -8024,7 +8024,8 @@ section.features {
     section.features .flex-item:nth-child(4), section.features .flex-item:nth-child(5), section.features .flex-item:nth-child(6) {
       margin-bottom: 0; }
   section.features .feature-image {
-    height: 105px; }
+    height: 100px; 
+    max-width: 90px;}
   section.features .feature-title {
     margin: 30px 0 20px;
     font-size: 18px;
