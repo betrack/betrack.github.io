@@ -8118,11 +8118,11 @@ section.contact-form {
         margin: 0;
         transform: translateY(-50%); } }
     section.contact-form .form-logo p {
-      font-size: 12px;
+      font-size: 16px;
       text-align: center;
-      color: #fff; }
+      color: #ffffff; }
       section.contact-form .form-logo p a {
-        color: #brand-blue; }
+        color: #ffffff; }
   section.contact-form .form-group {
     position: relative;
     margin-bottom: 25px; }
