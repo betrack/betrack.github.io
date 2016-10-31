@@ -4,7 +4,7 @@ Basic boilerplate with Gulp, Sass, Browsersync and a couple more stuff.
 ## Installation
 1. Don't use `master` branch for anything, it will be used to serve all the files for the Github Page.
 
-2. Use `landing-sergio` (we need to change it or rename it in the future).
+2. Use `dev` for development.
 
 3. Run some commands:
 
