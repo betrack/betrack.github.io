@@ -93,17 +93,17 @@ gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
 
-gulp.task('ga', function(){
+gulp.task, function(){
   gulp.src('.app/index.html')
   .pipe(ga({url: 'betrack.co', uid: 'UA-86505797-1'}))
   .pipe(gulp.dest('dist/'));
-});
+};
 
 // Build Sequences
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch','ga'],
+  runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
 })
@@ -112,7 +112,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts', 'cname', 'ga'],
+    ['useref', 'images', 'fonts', 'cname'],
     callback
   )
 })
