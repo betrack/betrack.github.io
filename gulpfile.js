@@ -11,7 +11,6 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-var ga = require('gulp-ga');
 var ghPages = require('gulp-gh-pages')
 
 // Basic Gulp task syntax
@@ -92,12 +91,6 @@ gulp.task('clean', function() {
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
-
-gulp.task, function(){
-  gulp.src('.app/index.html')
-  .pipe(ga({url: 'betrack.co', uid: 'UA-86505797-1'}))
-  .pipe(gulp.dest('dist/'));
-};
 
 // Build Sequences
 // ---------------
