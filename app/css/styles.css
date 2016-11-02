@@ -8100,7 +8100,8 @@ section.app {
 
 section.contact-form {
   background-color: #2bb0af;
-  padding: 50px 0 80px; }
+  padding: 0px 0 0px;
+  height: auto; }
   section.contact-form .row {
     position: relative; }
   section.contact-form .form {
